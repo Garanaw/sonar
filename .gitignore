@@ -1,0 +1,4 @@
+.env
+volumes/
+sonar-scanner/
+conf/
