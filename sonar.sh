@@ -18,6 +18,9 @@ case "$COMMAND" in
 	up)
 		docker-compose up
 		;;
+	daemon)
+		docker-compose up -d
+		;;
 	howto)
 		echo "sonar-scanner -Dsonar.projectKey={project_key} -Dsonar.host.url=http://localhost:9000 -Dsonar.login={project_token}"
 		;;
