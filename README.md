@@ -20,7 +20,7 @@ You should run the following commands to allow Elasticsearch to initiate:
     ulimit -n 65536
     ulimit -u 4096
 
-Also, the install path has to be added to the $PATH:
+Also, the installation path has to be added to the $PATH:
 
     export PATH=$PATH:${INSTALL_DIRECTORY}/sonar-scanner/bin
 
