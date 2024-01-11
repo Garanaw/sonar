@@ -2,7 +2,6 @@
 
 WORKING_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-#source <(sed -E -n 's/[^#]+/export &/ p' .env)
 source .env
 
 export PATH="${PATH}":"${WORKING_DIR}"/sonar-scanner/bin/
