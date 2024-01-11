@@ -1,6 +1,9 @@
+#!/bin/bash
+
 WORKING_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source <(sed -E -n 's/[^#]+/export &/ p' .env)
+#source <(sed -E -n 's/[^#]+/export &/ p' .env)
+source .env
 
 export PATH="${PATH}":"${WORKING_DIR}"/sonar-scanner/bin/
 
@@ -9,11 +12,11 @@ shift
 
 case "$COMMAND" in
 	config)
-		echo "This command has to be run with sudo"
-		sysctl -w vm.max_map_count=262144
-		sysctl -w fs.file-max=65536
-		ulimit -n 65536
-		ulimit -u 4096
+		echo "This commands have to be run with sudo"
+		echo "sysctl -w vm.max_map_count=262144"
+		echo "sysctl -w fs.file-max=65536"
+		echo "ulimit -n 65536"
+		echo "ulimit -u 4096"
 		;;
 	up)
 		docker-compose up
